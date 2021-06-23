@@ -1,13 +1,11 @@
-const express = require('express')
-const routes = require('./routes')
-const cors = require('cors')
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const app = express()
-require('./Config/dbConfig')
+import App from './App'; 
 
-app.use(cors())
-app.use(express.json())
-app.use(routes)
-
-
-app.listen(3000)
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
